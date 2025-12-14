@@ -1,0 +1,111 @@
+{
+    // 1. 編輯器設定（VSCode 內建功能）
+    "editor.tabSize": 4, // Tab 寬度為 4
+    "editor.insertSpaces": false, // 使用 Tab 而非空格作為縮排
+    "editor.formatOnSave": true, // 儲存檔案時自動格式化
+    "editor.formatOnType": true, // 輸入特定符號（如 }、;）時自動格式化
+    "editor.minimap.enabled": false, // 關閉右側的 Minimap 小地圖
+    "editor.renderWhitespace": "boundary", // 僅在邊界顯示空白字元
+    "editor.unicodeHighlight.ambiguousCharacters": false, // 不高亮顯示模糊 Unicode 字元
+    "editor.wordWrap": "off", // 不啟用自動換行
+    "editor.fontFamily": "Consolas, Menlo, 'Noto Sans TC', Monaco, 'Courier New', monospace", // 設定編輯器字型
+
+    // 2. Emmet 快速輸入（VSCode 內建功能）
+    "emmet.triggerExpansionOnTab": true, // 輸入縮寫後按 Tab 可展開成 HTML 結構
+
+    // 3. 檔案處理（VSCode 內建功能）
+    "files.insertFinalNewline": true, // 儲存時自動補上檔尾換行
+    "files.trimFinalNewlines": true, // 移除檔尾多餘換行
+    "files.trimTrailingWhitespace": true, // 移除每行行尾空白
+
+    // 4. 介面設定（部分為外掛 material-icon-theme）
+    "workbench.iconTheme": "material-icon-theme", // 使用 Material Icons 作為檔案圖示（外掛）
+    "explorer.confirmDelete": false, // 刪除檔案時不跳出確認提示
+    "diffEditor.ignoreTrimWhitespace": true, // 比對時忽略行尾空白差異
+    "diffEditor.renderSideBySide": false, // 差異比較採用上下呈現方式（非左右）
+
+    // 5. 終端機與 Copilot 整合（Copilot 為外掛）
+    "terminal.integrated.fontFamily": "Consolas,Menlo,  'Noto Sans TC', Monaco, 'Courier New', monospace", // 終端機使用的字型
+    "terminal.integrated.fontSize": 14, // 終端機字體大小
+    "chat.commandCenter.enabled": false, // 關閉 Copilot 命令中心（Copilot 外掛）
+
+    // 6. 語言支援與格式化（多為外掛：Prettier、Volar 等）
+    "[html]": { "editor.defaultFormatter": "vscode.html-language-features" }, // HTML 使用內建 formatter
+    "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // CSS 使用 Prettier（外掛）
+    "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // SCSS 使用 Prettier（外掛）
+    "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // JS 使用 Prettier（外掛）
+    "[vue]": { "editor.defaultFormatter": "Vue.volar" }, // Vue 使用 Volar（外掛）
+    "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // React TSX 使用 Prettier（外掛）
+    "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // TS 使用 Prettier（外掛）
+    "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // JSON 使用 Prettier（外掛）
+    "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" }, // JSON with Comments 使用 Prettier（外掛）
+    "html.format.wrapAttributes": "aligned-multiple", // HTML 屬性對齊排列
+    "html.format.wrapLineLength": 10000, // HTML 最大行寬限制為極大值，避免自動換行
+    "css.validate": true, // 啟用 CSS 語法檢查
+    "scss.validate": true, // 啟用 SCSS 語法檢查
+
+    // 7. Prettier 設定（Prettier 外掛）
+    "prettier.tabWidth": 4, // Prettier 縮排寬度
+    "prettier.printWidth": 10000, // 行寬限制設為極大值，防止自動換行
+    "prettier.singleQuote": true, // 使用單引號
+    "prettier.trailingComma": "all", // 所有可能的位置都加上尾端逗號
+    "prettier.bracketSameLine": true, // HTML 結尾大括號與內容同一行
+    "prettier.singleAttributePerLine": false, // HTML 標籤屬性可以同行
+    "prettier.vueIndentScriptAndStyle": true, // <script> 和 <style> 區塊內保持縮排
+
+    // 8. Tailwind 類別摺疊設定（tailwind-fold 外掛）
+    "tailwind-fold.autoFold": false, // 不自動摺疊 Tailwind class 列（、
+
+    // 9. Live Server 設定（Live Server 外掛）
+    "liveServer.settings.port": 51634, // 指定伺服器 port
+    "liveServer.settings.fullReload": true, // 頁面變更時整頁重新載入
+    "liveServer.settings.donotVerifyTags": true, // 不檢查 HTML tag 有效性
+    "liveServer.settings.donotShowInfoMsg": true, // 不顯示提示訊息
+    "liveServer.settings.ignoreFiles": [".vscode/**", "**/*.scss", "**/*.sass", "**/*.ts"], // 忽略這些檔案的變更
+
+    // 10. Live Sass 編譯設定（Live Sass Compiler 外掛）
+    "liveSassCompile.settings.formats": [
+        {
+            "extensionName": ".css", // 轉出為 .css 檔
+            "format": "expanded", // 使用非壓縮格式
+            "savePath": "~/../Styles/Libs" // 輸出路徑
+        }
+    ],
+    "liveSassCompile.settings.generateMap": true, // 產生對應的 .map 檔供除錯
+    "liveSassCompile.settings.autoprefix": ["> 0.5%", "last 2 versions"], // 自動補上瀏覽器前綴
+
+    // 11. Git 設定（VSCode 內建功能）
+    "git.enableSmartCommit": true, // 可直接 commit unstaged 檔案
+    "git.confirmSync": false, // 同步時不跳確認提示
+    "git.openRepositoryInParentFolders": "never", // 不自動開啟父層的 Git repo
+
+    // 12. 資料庫連線設定（mssql 外掛）
+    "mssql.connections": [
+        {
+            "server": "", // 資料庫伺服器地址
+            "database": "", // 資料庫名稱
+            "authenticationType": "SqlLogin", // 登入方式
+            "user": "", // 用戶名稱
+            "password": "", // 密碼（請隱藏）
+            "emptyPasswordInput": false, // 是否允許空密碼
+            "savePassword": true, // 儲存密碼
+            "encrypt": "Mandatory", // 強制加密連線
+            "trustServerCertificate": true // 信任伺服器證書
+        },
+        {
+            "server": "", // 資料庫伺服器地址
+            "database": "", // 資料庫名稱
+            "authenticationType": "SqlLogin", // 登入方式
+            "user": "", // 用戶名稱
+            "password": "", // 密碼
+            "emptyPasswordInput": false, // 是否允許空密碼
+            "savePassword": true, // 儲存密碼
+            "encrypt": "Mandatory", // 強制加密連線
+            "trustServerCertificate": true, // 信任伺服器證書
+            "connectTimeout": 15, // 連線超時設定
+            "commandTimeout": 30, // 執行命令超時設定
+            "applicationName": "vscode-mssql" // 連線應用程式名稱
+        }
+    ]
+}
+
